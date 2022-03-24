@@ -566,6 +566,7 @@ return view.extend({
 						.then(L.bind(this.renderMoreOptionsModal, this, s.section));
 				}, this);
 
+				/*
 				o = s.taboption('general', widgets.DeviceSelect, '_net_device', _('Device'));
 				o.ucioption = 'device';
 				o.nobridges = false;
@@ -575,6 +576,7 @@ return view.extend({
 				o = s.taboption('general', form.Flag, 'auto', _('Bring up on boot'));
 				o.modalonly = true;
 				o.default = o.enabled;
+				*/
 
 				if (L.hasSystemFeature('firewall')) {
 					o = s.taboption('firewall', widgets.ZoneSelect, '_zone', _('Create / Assign firewall-zone'), _('Choose the firewall zone you want to assign to this interface. Select <em>unspecified</em> to remove the interface from the associated zone or fill out the <em>custom</em> field to define a new zone and attach the interface to it.'));
@@ -663,7 +665,7 @@ return view.extend({
 						]);
 					};
 
-					ss.taboption('general', form.Flag, 'ignore', _('Ignore interface'), _('Disable <abbr title="Dynamic Host Configuration Protocol">DHCP</abbr> for this interface.'));
+					// ss.taboption('general', form.Flag, 'ignore', _('Ignore interface'), _('Disable <abbr title="Dynamic Host Configuration Protocol">DHCP</abbr> for this interface.'));
 
 					if (protoval == 'static') {
 						so = ss.taboption('general', form.Value, 'start', _('Start'), _('Lowest leased address as offset from the network address.'));

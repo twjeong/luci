@@ -121,7 +121,7 @@ return view.extend({
 		s.tab('general', _('General Settings'));
 		s.tab('logging', _('Logging'));
 		s.tab('timesync', _('Time Synchronization'));
-		s.tab('language', _('Language and Style'));
+		// s.tab('language', _('Language and Style'));
 
 		/*
 		 * System Properties
@@ -221,6 +221,7 @@ return view.extend({
 		 * Language & Style
 		 */
 
+		/*
 		o = s.taboption('language', form.ListValue, '_lang', _('Language'))
 		o.uciconfig = 'luci';
 		o.ucisection = 'main';
@@ -241,6 +242,7 @@ return view.extend({
 		for (var i = 0; i < k.length; i++)
 			if (k[i].charAt(0) != '.')
 				o.value(uci.get('luci', 'themes', k[i]), k[i]);
+		*/
 
 		/*
 		 * NTP

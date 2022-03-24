@@ -299,7 +299,8 @@ return baseclass.extend({
 
 			model: {
 				title: _('Model'),
-				value: boardinfo.model
+				// value: boardinfo.model
+				value: 'DIVA-IAP-N'
 			},
 
 			system: {
@@ -309,7 +310,8 @@ return baseclass.extend({
 
 			release: {
 				title: _('Firmware Version'),
-				value: boardinfo.release.description
+				// value: boardinfo.release.description
+				value: '21.02 r16520-8'
 			}
 		};
 

@@ -412,7 +412,7 @@ return view.extend({
 		o.inputtitle = _('Upload archive...');
 		o.onclick = L.bind(this.handleRestore, this);
 
-
+		/*
 		var mtdblocks = [];
 		procmtd.split(/\n/).forEach(function(ln) {
 			var match = ln.match(/^mtd(\d+): .+ "(.+?)"$/);
@@ -434,7 +434,7 @@ return view.extend({
 			o.inputtitle = _('Save mtdblock');
 			o.onclick = L.bind(this.handleBlock, this, hostname);
 		}
-
+		*/
 
 		o = s.option(form.SectionValue, 'actions', form.NamedSection, 'actions', 'actions', _('Flash new firmware image'),
 			has_sysupgrade

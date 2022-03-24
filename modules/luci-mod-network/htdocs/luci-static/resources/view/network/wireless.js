@@ -868,21 +868,25 @@ return view.extend({
 
 			if (inst.getWifiNetworks) {
 				btns = [
+					/*
 					E('button', {
 						'class': 'cbi-button cbi-button-neutral',
 						'title': _('Restart radio interface'),
 						'click': ui.createHandlerFn(this, radio_restart, section_id)
 					}, _('Restart')),
+					*/
 					E('button', {
 						'class': 'cbi-button cbi-button-action important',
 						'title': _('Find and join network'),
 						'click': ui.createHandlerFn(this, 'handleScan', inst)
-					}, _('Scan')),
+					}, _('Scan'))
+					/*
 					E('button', {
 						'class': 'cbi-button cbi-button-add',
 						'title': _('Provide new network'),
 						'click': ui.createHandlerFn(this, 'handleAdd', inst)
 					}, _('Add'))
+					*/
 				];
 			}
 			else {
@@ -890,21 +894,25 @@ return view.extend({
 					uci.get('wireless', inst.getWifiDeviceName(), 'disabled') == '1');
 
 				btns = [
+					/*
 					E('button', {
 						'class': 'cbi-button cbi-button-neutral enable-disable',
 						'title': isDisabled ? _('Enable this network') : _('Disable this network'),
 						'click': ui.createHandlerFn(this, network_updown, section_id, this.map)
 					}, isDisabled ? _('Enable') : _('Disable')),
+					*/
 					E('button', {
 						'class': 'cbi-button cbi-button-action important',
 						'title': _('Edit this network'),
 						'click': ui.createHandlerFn(this, 'renderMoreOptionsModal', section_id)
-					}, _('Edit')),
+					}, _('Edit'))
+					/*
 					E('button', {
 						'class': 'cbi-button cbi-button-negative remove',
 						'title': _('Delete this network'),
 						'click': ui.createHandlerFn(this, 'handleRemove', section_id)
 					}, _('Remove'))
+					*/
 				];
 			}
 
@@ -990,7 +998,7 @@ return view.extend({
 				o = ss.taboption('general', form.ListValue, 'mode', _('Mode'));
 				o.value('ap', _('Access Point'));
 				o.value('sta', _('Client'));
-				o.value('adhoc', _('Ad-Hoc'));
+				// o.value('adhoc', _('Ad-Hoc'));
 
 				o = ss.taboption('general', form.Value, 'mesh_id', _('Mesh Id'));
 				o.depends('mode', 'mesh');
@@ -1073,9 +1081,9 @@ return view.extend({
 					    bssid = ss.children[5],
 					    encr;
 
-					mode.value('mesh', '802.11s');
-					mode.value('ahdemo', _('Pseudo Ad-Hoc (ahdemo)'));
-					mode.value('monitor', _('Monitor'));
+					// mode.value('mesh', '802.11s');
+					// mode.value('ahdemo', _('Pseudo Ad-Hoc (ahdemo)'));
+					// mode.value('monitor', _('Monitor'));
 
 					bssid.depends('mode', 'adhoc');
 					bssid.depends('mode', 'sta');

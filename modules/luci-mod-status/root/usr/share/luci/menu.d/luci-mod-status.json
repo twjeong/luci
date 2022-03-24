@@ -11,21 +11,9 @@
 		}
 	},
 
-	"admin/status/iptables": {
-		"title": "Firewall",
-		"order": 2,
-		"action": {
-			"type": "view",
-			"path": "status/iptables"
-		},
-		"depends": {
-			"acl": [ "luci-mod-status-firewall" ]
-		}
-	},
-
 	"admin/status/routes": {
 		"title": "Routes",
-		"order": 3,
+		"order": 2,
 		"action": {
 			"type": "view",
 			"path": "status/routes"
@@ -37,7 +25,7 @@
 
 	"admin/status/syslog": {
 		"title": "System Log",
-		"order": 4,
+		"order": 3,
 		"action": {
 			"type": "view",
 			"path": "status/syslog"
@@ -49,7 +37,7 @@
 
 	"admin/status/dmesg": {
 		"title": "Kernel Log",
-		"order": 5,
+		"order": 4,
 		"action": {
 			"type": "view",
 			"path": "status/dmesg"
@@ -59,21 +47,9 @@
 		}
 	},
 
-	"admin/status/processes": {
-		"title": "Processes",
-		"order": 6,
-		"action": {
-			"type": "view",
-			"path": "status/processes"
-		},
-		"depends": {
-			"acl": [ "luci-mod-status-processes" ]
-		}
-	},
-
 	"admin/status/channel_analysis": {
 		"title": "Channel Analysis",
-		"order": 7,
+		"order": 5,
 		"action": {
 			"type": "view",
 			"path": "status/channel_analysis"
@@ -86,7 +62,7 @@
 
 	"admin/status/realtime": {
 		"title": "Realtime Graphs",
-		"order": 7,
+		"order": 6,
 		"action": {
 			"type": "alias",
 			"path": "admin/status/realtime/load"
